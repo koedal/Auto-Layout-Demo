@@ -48,6 +48,29 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (IBAction)didSelectAnimate:(id)sender {
+    CGAffineTransform scale = CGAffineTransformMakeScale(1.5f, 1.5f);
+    
+    NSTimeInterval duration = 0.33;
+    
+    NSArray *stars = @[self.starOne, self.starTwo, self.starThree];
+    
+    for (int i = 0; i < stars.count; i++) {
+        UIView *star = stars[i];
+        
+        [UIView animateWithDuration:duration
+                              delay:0.25 * i
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+                             star.transform = scale;
+                         } completion:^(BOOL finished) {
+                             [UIView animateWithDuration:duration animations:^{
+                                 star.transform = CGAffineTransformIdentity;
+                             }];
+                         }];
+    }
+}
+
 - (BOOL)hasFourInchDisplay {
     return ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 568.0);
 }

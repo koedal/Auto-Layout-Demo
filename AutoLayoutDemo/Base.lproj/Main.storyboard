@@ -160,6 +160,9 @@
                                 <state key="normal" title="Animate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="didSelectAnimate:" destination="NnQ-9a-8qX" eventType="touchUpInside" id="x4b-H0-6xb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWr-lG-TCg">
                                 <rect key="frame" x="20" y="20" width="39" height="30"/>

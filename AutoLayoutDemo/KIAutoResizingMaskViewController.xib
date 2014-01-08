@@ -77,6 +77,9 @@
                     <state key="normal" title="Animate">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="didSelectAnimate:" destination="-1" eventType="touchUpInside" id="ShP-EP-fzd"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QZ1-wk-KfO">
                     <rect key="frame" x="24" y="20" width="39" height="30"/>
