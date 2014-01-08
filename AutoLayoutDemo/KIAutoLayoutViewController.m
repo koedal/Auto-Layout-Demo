@@ -20,15 +20,6 @@
 
 @implementation KIAutoLayoutViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -43,26 +34,8 @@
     [self applyConstraintsForOrientation:orientation];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (IBAction)didSelectMenuButton:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
-}
-
-- (void)applyConstraintsForOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    if (UIInterfaceOrientationIsLandscape(interfaceOrientation)) {
-        [self.view removeConstraints:self.portraitConstraints];
-        [self.view addConstraints:self.landscapeConstraints];
-    } else {
-        [self.view removeConstraints:self.landscapeConstraints];
-        [self.view addConstraints:self.portraitConstraints];
-    }
-
 }
 
 - (void)setupConstraints
@@ -95,10 +68,22 @@
     self.landscapeConstraints = [constraints copy];
 }
 
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration
+- (void)applyConstraintsForOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    [super willAnimateRotationToInterfaceOrientation:interfaceOrientation duration:duration];
+    if (UIInterfaceOrientationIsLandscape(interfaceOrientation)) {
+        [self.view removeConstraints:self.portraitConstraints];
+        [self.view addConstraints:self.landscapeConstraints];
+    } else {
+        [self.view removeConstraints:self.landscapeConstraints];
+        [self.view addConstraints:self.portraitConstraints];
+    }
+}
+
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [super willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
     
-    [self applyConstraintsForOrientation:interfaceOrientation];
+    [self applyConstraintsForOrientation:toInterfaceOrientation];
 }
 @end
