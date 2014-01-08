@@ -93,10 +93,6 @@
     [constraints addObject:centerYConstraint];
     [constraints addObject:centerXConstraint];
     self.landscapeConstraints = [constraints copy];
-    
-    
-    // Portrait Constraints
-    self.portraitConstraints = self.view.constraints;
 }
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration

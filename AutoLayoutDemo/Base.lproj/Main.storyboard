@@ -178,6 +178,13 @@
                         <outlet property="threeStar" destination="2bQ-Wo-HS8" id="md0-2r-mYZ"/>
                         <outlet property="twoStar" destination="znI-Pw-jo4" id="jgO-g7-cRe"/>
                         <outletCollection property="portraitConstraints" destination="RSW-HT-1UW" id="CgX-rO-FpB"/>
+                        <outletCollection property="portraitConstraints" destination="p7H-cF-quX" id="VBK-qr-BVl"/>
+                        <outletCollection property="portraitConstraints" destination="6aA-Cv-7Ua" id="LKT-kQ-dkk"/>
+                        <outletCollection property="portraitConstraints" destination="KiD-6q-lbC" id="EUQ-Gc-RfC"/>
+                        <outletCollection property="portraitConstraints" destination="taB-6O-oA4" id="WmV-Kh-BZF"/>
+                        <outletCollection property="portraitConstraints" destination="XKf-Nf-q06" id="v0K-BS-DFy"/>
+                        <outletCollection property="portraitConstraints" destination="Mzr-fl-CCY" id="SqT-H6-3kg"/>
+                        <outletCollection property="portraitConstraints" destination="lb7-jr-JrX" id="XSx-fn-B04"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g9V-qt-C2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
