@@ -1,23 +1,104 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="VCU-Q5-xun">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="KIViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Uq-Cc-7je"/>
+                        <viewControllerLayoutGuide type="bottom" id="YLp-uP-gKZ"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPj-Sz-RUG">
+                                <rect key="frame" x="119" y="238" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Auto Layout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="NnQ-9a-8qX" kind="push" id="mGn-Oz-pYa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WeU-Jb-ZjE">
+                                <rect key="frame" x="88" y="276" width="144" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Auto Resizing Masks">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didSelectAutoResizeButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YiU-2h-CRJ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="koedal" translatesAutoresizingMaskIntoConstraints="NO" id="SH5-FF-mnB">
+                                <rect key="frame" x="40" y="120" width="241" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WeU-Jb-ZjE" firstAttribute="top" secondItem="CPj-Sz-RUG" secondAttribute="bottom" constant="8" symbolic="YES" id="Rm5-1h-YiN"/>
+                            <constraint firstItem="CPj-Sz-RUG" firstAttribute="centerX" secondItem="SH5-FF-mnB" secondAttribute="centerX" id="Ucd-cO-84C"/>
+                            <constraint firstItem="SH5-FF-mnB" firstAttribute="top" secondItem="2Uq-Cc-7je" secondAttribute="bottom" constant="100" id="f8x-2w-ddC"/>
+                            <constraint firstAttribute="centerX" secondItem="SH5-FF-mnB" secondAttribute="centerX" id="fhp-lH-S9E"/>
+                            <constraint firstItem="CPj-Sz-RUG" firstAttribute="top" secondItem="SH5-FF-mnB" secondAttribute="bottom" constant="80" id="lIm-eP-Tml"/>
+                            <constraint firstItem="CPj-Sz-RUG" firstAttribute="centerX" secondItem="WeU-Jb-ZjE" secondAttribute="centerX" constant="0.5" id="qCT-q3-jNu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kig-98-40D"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="672" y="138"/>
+        </scene>
+        <!--Auto Layout View Controller-->
+        <scene sceneID="0EK-wx-nc8">
+            <objects>
+                <viewController id="NnQ-9a-8qX" customClass="KIAutoLayoutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Cw-Hj-AH4"/>
+                        <viewControllerLayoutGuide type="bottom" id="s1s-qi-0Gi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h55-Ik-vE3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="0nm-1l-uBZ"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g9V-qt-C2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1084" y="138"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4oO-tA-eY2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VCU-Q5-xun" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bRz-Z2-Q5W">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="OZn-MY-PVH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Mm-Ob-uTB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105" y="405"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="koedal" width="241" height="38"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

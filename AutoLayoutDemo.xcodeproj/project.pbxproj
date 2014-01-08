@@ -21,6 +21,9 @@
 		F045FE5D187DA698007FF080 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F045FE3F187DA698007FF080 /* UIKit.framework */; };
 		F045FE65187DA698007FF080 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F045FE63187DA698007FF080 /* InfoPlist.strings */; };
 		F045FE67187DA698007FF080 /* AutoLayoutDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F045FE66187DA698007FF080 /* AutoLayoutDemoTests.m */; };
+		F045FE79187DACBF007FF080 /* KIAutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F045FE78187DACBF007FF080 /* KIAutoLayoutViewController.m */; };
+		F045FE7D187DAD4C007FF080 /* KIAutoResizingMaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F045FE7B187DAD4C007FF080 /* KIAutoResizingMaskViewController.m */; };
+		F045FE7E187DAD4C007FF080 /* KIAutoResizingMaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F045FE7C187DAD4C007FF080 /* KIAutoResizingMaskViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		F045FE62187DA698007FF080 /* AutoLayoutDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AutoLayoutDemoTests-Info.plist"; sourceTree = "<group>"; };
 		F045FE64187DA698007FF080 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F045FE66187DA698007FF080 /* AutoLayoutDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutDemoTests.m; sourceTree = "<group>"; };
+		F045FE77187DACBF007FF080 /* KIAutoLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIAutoLayoutViewController.h; sourceTree = "<group>"; };
+		F045FE78187DACBF007FF080 /* KIAutoLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KIAutoLayoutViewController.m; sourceTree = "<group>"; };
+		F045FE7A187DAD4C007FF080 /* KIAutoResizingMaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIAutoResizingMaskViewController.h; sourceTree = "<group>"; };
+		F045FE7B187DAD4C007FF080 /* KIAutoResizingMaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KIAutoResizingMaskViewController.m; sourceTree = "<group>"; };
+		F045FE7C187DAD4C007FF080 /* KIAutoResizingMaskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KIAutoResizingMaskViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,11 @@
 				F045FE51187DA698007FF080 /* KIViewController.m */,
 				F045FE53187DA698007FF080 /* Images.xcassets */,
 				F045FE42187DA698007FF080 /* Supporting Files */,
+				F045FE77187DACBF007FF080 /* KIAutoLayoutViewController.h */,
+				F045FE78187DACBF007FF080 /* KIAutoLayoutViewController.m */,
+				F045FE7A187DAD4C007FF080 /* KIAutoResizingMaskViewController.h */,
+				F045FE7B187DAD4C007FF080 /* KIAutoResizingMaskViewController.m */,
+				F045FE7C187DAD4C007FF080 /* KIAutoResizingMaskViewController.xib */,
 			);
 			path = AutoLayoutDemo;
 			sourceTree = "<group>";
@@ -229,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F045FE7E187DAD4C007FF080 /* KIAutoResizingMaskViewController.xib in Resources */,
 				F045FE54187DA698007FF080 /* Images.xcassets in Resources */,
 				F045FE46187DA698007FF080 /* InfoPlist.strings in Resources */,
 				F045FE4F187DA698007FF080 /* Main.storyboard in Resources */,
@@ -250,7 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F045FE7D187DAD4C007FF080 /* KIAutoResizingMaskViewController.m in Sources */,
 				F045FE52187DA698007FF080 /* KIViewController.m in Sources */,
+				F045FE79187DACBF007FF080 /* KIAutoLayoutViewController.m in Sources */,
 				F045FE4C187DA698007FF080 /* KIAppDelegate.m in Sources */,
 				F045FE48187DA698007FF080 /* main.m in Sources */,
 			);
