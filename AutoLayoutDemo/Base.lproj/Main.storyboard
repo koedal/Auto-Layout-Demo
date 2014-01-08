@@ -160,18 +160,25 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yRF-aj-UXk" firstAttribute="leading" secondItem="h55-Ik-vE3" secondAttribute="leading" constant="80" id="4wL-JY-bHv"/>
-                            <constraint firstItem="znI-Pw-jo4" firstAttribute="top" secondItem="9Cw-Hj-AH4" secondAttribute="bottom" constant="165" id="HBP-bE-Gne"/>
+                            <constraint firstItem="znI-Pw-jo4" firstAttribute="centerX" secondItem="2bQ-Wo-HS8" secondAttribute="centerX" id="6aA-Cv-7Ua"/>
+                            <constraint firstItem="znI-Pw-jo4" firstAttribute="top" secondItem="yRF-aj-UXk" secondAttribute="bottom" constant="8" id="KiD-6q-lbC"/>
                             <constraint firstItem="8NL-BK-d4s" firstAttribute="top" secondItem="2bQ-Wo-HS8" secondAttribute="bottom" constant="11" id="Mzr-fl-CCY"/>
                             <constraint firstAttribute="centerX" secondItem="znI-Pw-jo4" secondAttribute="centerX" id="RSW-HT-1UW"/>
                             <constraint firstItem="HR5-3W-rSG" firstAttribute="centerX" secondItem="8NL-BK-d4s" secondAttribute="centerX" constant="-0.5" id="XKf-Nf-q06"/>
-                            <constraint firstItem="2bQ-Wo-HS8" firstAttribute="leading" secondItem="h55-Ik-vE3" secondAttribute="leading" constant="80" id="gfb-Ve-Yz2"/>
                             <constraint firstItem="s1s-qi-0Gi" firstAttribute="top" secondItem="8NL-BK-d4s" secondAttribute="bottom" constant="20" id="lb7-jr-JrX"/>
                             <constraint firstItem="yRF-aj-UXk" firstAttribute="top" secondItem="9Cw-Hj-AH4" secondAttribute="bottom" id="p7H-cF-quX"/>
+                            <constraint firstItem="znI-Pw-jo4" firstAttribute="centerX" secondItem="yRF-aj-UXk" secondAttribute="centerX" id="taB-6O-oA4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0nm-1l-uBZ"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="animateButton" destination="8NL-BK-d4s" id="wTs-hX-Rwl"/>
+                        <outlet property="oneStar" destination="yRF-aj-UXk" id="1Z8-BV-UUh"/>
+                        <outlet property="threeStar" destination="2bQ-Wo-HS8" id="md0-2r-mYZ"/>
+                        <outlet property="twoStar" destination="znI-Pw-jo4" id="jgO-g7-cRe"/>
+                        <outletCollection property="portraitConstraints" destination="RSW-HT-1UW" id="CgX-rO-FpB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g9V-qt-C2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
