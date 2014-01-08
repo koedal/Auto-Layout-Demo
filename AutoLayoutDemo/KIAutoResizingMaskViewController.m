@@ -30,21 +30,32 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self setupFrames];
+    [self applyFrames];
+}
+
+- (void)applyFrames {
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    [self applyFramesForOrientation:orientation];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
-    [self applyFramesForOrientation:orientation];
+    [self applyFrames];
 }
 
 - (IBAction)didSelectMenuButton:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (BOOL)hasFourInchDisplay {
+    return ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 568.0);
+}
+
 - (void)setupFrames
 {
+    BOOL isShortScreen = ![self hasFourInchDisplay];
+    
     // Using frames instead of center points here because I'll need to change the size of the stars as well
     // when I handle the smaller screen sizes
     portraitStarOneFrame = self.starOne.frame;
@@ -55,9 +66,26 @@
     CGFloat landscapeStarY = 20;
     CGFloat landscapeStarPadding = 20;
     
+    if (isShortScreen) {
+        landscapeStarOneX = 0;
+        landscapeStarPadding = 2;
+    }
+    
     landscapeStarOneFrame = CGRectMake(landscapeStarOneX, landscapeStarY, portraitStarOneFrame.size.width, portraitStarOneFrame.size.height);
     landscapeStarTwoFrame = CGRectMake(landscapeStarOneX + portraitStarOneFrame.size.width + landscapeStarPadding, landscapeStarY, portraitStarTwoFrame.size.width, portraitStarTwoFrame.size.height);
     landscapeStarThreeFrame = CGRectMake(landscapeStarTwoFrame.origin.x + landscapeStarTwoFrame.size.width + landscapeStarPadding, landscapeStarY, portraitStarThreeFrame.size.width, portraitStarThreeFrame.size.height);
+    
+    // Portrait 3.5 inch
+    if (isShortScreen) {
+        CGFloat heightToShrinkStarContainer = 25;
+        portraitStarOneFrame.size.height = portraitStarOneFrame.size.height - heightToShrinkStarContainer;
+        portraitStarTwoFrame.size.height = portraitStarTwoFrame.size.height - heightToShrinkStarContainer;
+        portraitStarThreeFrame.size.height = portraitStarThreeFrame.size.height - heightToShrinkStarContainer;
+        
+        portraitStarTwoFrame.origin.y = portraitStarTwoFrame.origin.y - heightToShrinkStarContainer;
+        portraitStarThreeFrame.origin.y = portraitStarThreeFrame.origin.y - (2 * heightToShrinkStarContainer);
+    }
+    
 }
 
 - (void)applyFramesForOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
