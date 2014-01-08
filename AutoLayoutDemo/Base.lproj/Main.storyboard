@@ -93,7 +93,7 @@
                                     <constraint firstAttribute="width" constant="160" id="QXj-9N-EDM"/>
                                     <constraint firstItem="Ty4-yO-99E" firstAttribute="centerX" secondItem="koQ-Vk-NX2" secondAttribute="centerX" id="RCP-jF-pps"/>
                                     <constraint firstAttribute="bottom" secondItem="koQ-Vk-NX2" secondAttribute="bottom" constant="20" id="rBz-eK-Xn5"/>
-                                    <constraint firstAttribute="height" priority="750" constant="157" id="rol-N6-IPP"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" priority="750" constant="157" id="rol-N6-IPP"/>
                                     <constraint firstAttribute="centerX" secondItem="koQ-Vk-NX2" secondAttribute="centerX" id="sFD-oZ-TV2"/>
                                 </constraints>
                             </view>
@@ -200,6 +200,9 @@
                         <outletCollection property="portraitConstraints" destination="taB-6O-oA4" id="WmV-Kh-BZF"/>
                         <outletCollection property="portraitConstraints" destination="XKf-Nf-q06" id="v0K-BS-DFy"/>
                         <outletCollection property="portraitConstraints" destination="lb7-jr-JrX" id="XSx-fn-B04"/>
+                        <outletCollection property="portraitConstraints" destination="CGI-Eg-r7R" id="N7b-0B-I6f"/>
+                        <outletCollection property="portraitConstraints" destination="6hd-AZ-o8O" id="mvM-rQ-hZh"/>
+                        <outletCollection property="portraitConstraints" destination="slw-CL-Kaq" id="DJi-F0-esj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g9V-qt-C2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
