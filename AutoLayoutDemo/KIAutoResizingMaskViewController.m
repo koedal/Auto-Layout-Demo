@@ -27,13 +27,16 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)didSelectMenuButton:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
