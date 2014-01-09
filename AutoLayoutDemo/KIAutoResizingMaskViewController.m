@@ -91,7 +91,7 @@
     
     if (isShortScreen) {
         landscapeStarOneX = 0;
-        landscapeStarPadding = 2;
+        landscapeStarPadding = 1;
     }
     
     landscapeStarOneFrame = CGRectMake(landscapeStarOneX, landscapeStarY, portraitStarOneFrame.size.width, portraitStarOneFrame.size.height);
